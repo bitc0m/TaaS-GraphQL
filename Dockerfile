@@ -1,7 +1,7 @@
 FROM node:13.12.0-alpine3.11
 
 # Default Env variables
-ENV PORT 3000
+ENV PORT 3030
 ENV HOST 0.0.0.0
 ENV TEZOS_NODE https://api.tezos.org.ua 
 ENV MAX_BLOCKS 5
@@ -17,5 +17,5 @@ RUN npm i
 COPY . .
 RUN npm run build
 USER node
-EXPOSE 3000
+EXPOSE 3333
 CMD [ "npm", "run", "start" ]
